@@ -1,0 +1,55 @@
+TABLERO ALIMENTA-IA (datos ficticios)
+Resumen: {'lotes': 36, 'producidas': 13888, 'defectuosas': 407, 'tasa_global': 2.930587557603687}
+Barras {'lotes': 12, 'producidas': 4352, 'defectuosas': 153, 'tasa_global': 3.515625}
+Galletas {'lotes': 12, 'producidas': 4678, 'defectuosas': 99, 'tasa_global': 2.116289012398461}
+Pan {'lotes': 12, 'producidas': 4858, 'defectuosas': 155, 'tasa_global': 3.190613421160972}
+Lotes:
+L-001 Pan 1.47% 74.9 °C
+L-002 Galletas 2.71% 74.4 °C
+L-003 Barras 2.42% 71.8 °C
+L-004 Pan 0.60% 69.1 °C
+L-005 Galletas 2.30% 72.3 °C
+L-006 Barras 2.52% 75.1 °C
+L-007 Pan 1.63% 69.8 °C
+L-008 Galletas 0.84% 73.2 °C
+L-009 Barras 1.60% 73.3 °C
+L-010 Pan 3.46% 74.0 °C
+L-011 Galletas 1.86% 73.8 °C
+L-012 Barras 2.45% 73.3 °C
+L-013 Pan 1.07% 74.5 °C
+L-014 Galletas 1.77% 72.7 °C
+L-015 Barras 3.24% 71.1 °C
+L-016 Pan 2.39% 75.1 °C
+L-017 Galletas 2.94% 75.1 °C
+L-018 Barras 3.16% 73.4 °C
+L-019 Pan 2.53% 73.5 °C
+L-020 Galletas 1.19% 73.1 °C
+L-021 Barras 3.32% 72.5 °C
+L-022 Pan 1.04% 73.8 °C
+L-023 Galletas 1.26% 73.8 °C
+L-024 Barras 1.45% 75.3 °C
+L-025 Pan 2.57% 70.1 °C
+L-026 Galletas 2.93% 69.7 °C
+L-027 Barras 17.98% 105.1 °C
+L-028 Pan 3.18% 72.6 °C
+L-029 Galletas 3.22% 72.6 °C
+L-030 Barras 2.09% 74.6 °C
+L-031 Pan 13.68% 112.9 °C
+L-032 Galletas 3.44% 74.9 °C
+L-033 Barras 0.91% 71.0 °C
+L-034 Pan 13.59% 98.8 °C
+L-035 Galletas 2.20% 69.7 °C
+L-036 Barras 11.15% 44.7 °C
+ALERTAS ORIENTATIVAS - NO sustituyen controles sanitarios
+L-025 ALERTA
+L-026 ALERTA
+L-027 ALERTA
+L-028 sin alerta
+L-029 sin alerta
+L-030 sin alerta
+L-031 ALERTA
+L-032 ALERTA
+L-033 ALERTA
+L-034 ALERTA
+L-035 ALERTA
+L-036 ALERTA

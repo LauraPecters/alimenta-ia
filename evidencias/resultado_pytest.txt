@@ -1,0 +1,25 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-8.3.5, pluggy-1.7.0 -- C:\Users\Laura Pecters\Documents\UNIVERSIDAD\Administracci¾n de Proyectos\ALIMENTA_IA_Proyecto_Completo\ALIMENTA-IA\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Laura Pecters\Documents\UNIVERSIDAD\Administracci¾n de Proyectos\ALIMENTA_IA_Proyecto_Completo\ALIMENTA-IA
+collecting ... collected 17 items
+
+tests/test_app.py::test_cargar_lotes PASSED                              [  5%]
+tests/test_app.py::test_guardar_lote PASSED                              [ 11%]
+tests/test_app.py::test_rechazar_lote_duplicado PASSED                   [ 17%]
+tests/test_app.py::test_mostrar_tablero PASSED                           [ 23%]
+tests/test_app.py::test_rf05_alertas_y_advertencia PASSED                [ 29%]
+tests/test_calidad.py::test_resumen PASSED                               [ 35%]
+tests/test_calidad.py::test_filtro PASSED                                [ 41%]
+tests/test_calidad.py::test_vacio PASSED                                 [ 47%]
+tests/test_ia.py::test_detector_longitud_y_binario PASSED                [ 52%]
+tests/test_produccion.py::test_tasa_normal PASSED                        [ 58%]
+tests/test_produccion.py::test_cero_producidas PASSED                    [ 64%]
+tests/test_produccion.py::test_negativos PASSED                          [ 70%]
+tests/test_produccion.py::test_defectuosas_mayor PASSED                  [ 76%]
+tests/test_produccion.py::test_lote_valido PASSED                        [ 82%]
+tests/test_produccion.py::test_codigo_duplicado PASSED                   [ 88%]
+tests/test_produccion.py::test_fecha_invalida PASSED                     [ 94%]
+tests/test_produccion.py::test_tipo_cantidad_invalido PASSED             [100%]
+
+============================= 17 passed in 1.90s ==============================

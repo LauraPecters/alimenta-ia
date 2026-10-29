@@ -68,3 +68,23 @@ def test_mostrar_tablero(capsys):
     assert "Galletas" in salida
     assert "L-001" in salida
     assert "L-002" in salida
+
+def test_rf05_alertas_y_advertencia(capsys, tmp_path):
+    from src.app import mostrar_alertas
+    from pathlib import Path
+
+    original = (
+        Path(__file__).resolve().parents[1]
+        / "data" / "lotes_ejemplo.csv"
+    )
+    ruta = tmp_path / "lotes_ia.csv"
+    ruta.write_bytes(original.read_bytes())
+
+    mostrar_alertas(ruta)
+    salida = capsys.readouterr().out
+
+    assert "ALERTAS ORIENTATIVAS" in salida
+    assert "NO sustituyen controles sanitarios" in salida
+    assert "L-025" in salida
+    assert "ALERTA" in salida
+    assert "sin alerta" in salida

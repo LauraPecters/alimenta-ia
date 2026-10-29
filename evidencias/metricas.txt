@@ -1,0 +1,24 @@
+ALIMENTA-IA - RESULTADOS DE MEDICIÓN
+
+Pruebas automatizadas: 17/17 aprobadas (100 %)
+Cobertura RF con pruebas asociadas: 5/5 (100 %)
+
+Datos sintéticos: 36 lotes
+Entrenamiento IA: 24 lotes
+Evaluación IA: 12 lotes
+
+Verdaderos positivos (TP): 4
+Falsos negativos (FN): 0
+Falsos positivos (FP): 5
+Verdaderos negativos (TN): 3
+
+Recall: 100 %
+Precisión: 44.44 %
+Alertas generadas: 9
+
+Producción: 13.888 unidades
+Unidades defectuosas: 407
+Tasa global de defectos: 2.931 %
+
+Observación: Las alertas de IA son orientativas
+y no sustituyen controles sanitarios.

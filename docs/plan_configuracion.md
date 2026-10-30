@@ -1,22 +1,31 @@
-# Plan de gestión de configuración
+# Plan de gestión de configuración — ALIMENTA-IA
 
-**SCI:** SCI-01 `src/` (código); SCI-02 `tests/` (pruebas); SCI-03 `data/` (datos sintéticos); SCI-04 `docs/` (documentos). Responsable asignado por rol: desarrollo, QA, IA/medición y configuración, respectivamente. **No se cuenta con nombres de integrantes.**
+## Elementos de configuración
 
-**Convenciones:** rama base `main`; ramas `feature/GH-01-registro-lotes`, `feature/GH-02-indicadores`, `feature/GH-03-detector-ia`; commits `feat(GH-01): ...`, `test(GH-01): ...`, `docs: ...`; PR enlazadas a cada issue GH-01/02/03 con descripción, pruebas y revisión obligatoria. Línea base inicial propuesta: `main` tras revisión; versión objetivo `v1.0.0` solo después de cumplir criterios de salida.
+| SCI | Elemento | Ubicación | Responsable por rol | Línea base |
+|---|---|---|---|---|
+| SCI-01 | Código | `src/` | Desarrollo | `v1.0.0` / `848e58b` |
+| SCI-02 | Pruebas | `tests/` | QA | `v1.0.0` / `848e58b` |
+| SCI-03 | Datos sintéticos | `data/` | IA / medición | `v1.0.0` / `848e58b` |
+| SCI-04 | Documentación | `docs/` | Configuración | `v1.0.0` / `848e58b` |
 
-**Estado real:** proyecto entregado en ZIP, sin remoto GitHub, ramas, PR ni tag remoto comprobables. No afirmar liberación hasta contar con URL, historial, revisiones y pruebas registradas.
+**Integrantes del equipo:** Laura Pecters Martínez y Juan Pablo Cepeda. Las responsabilidades técnicas se consignan por rol, sin atribuir cargos individuales no documentados.
 
-**Comandos orientativos tras crear repo remoto:**
+## Convenciones
 
-```bash
-git init
-git branch -M main
-git add .
-git commit -m "chore: estructura inicial ALIMENTA-IA"
-git remote add origin URL_DEL_REPOSITORIO
-git push -u origin main
-# Crear issues y ramas; abrir y revisar PR para GH-01, GH-02 y GH-03.
-# Solo cuando la auditoria apruebe liberar:
-git tag -a v1.0.0 -m "Primera version educativa"
-git push origin v1.0.0
-```
+- Rama base: `main`.
+- Ramas de trabajo: `feature/GH-01-registro-lotes`, `feature/GH-02-indicadores`, `feature/GH-03-detector-ia`, `feature/app-integrada`, `test/pruebas-integracion` y `docs/cierre-auditoria`.
+- Commits descriptivos (`feat`, `test`, `docs`); PR revisado antes de integrar.
+- Tickets GH-01, GH-02 y GH-03; trazabilidad detallada en `docs/trazabilidad.md`.
+
+## Historia de integración
+
+- PR #2 (registro), #4 (indicadores), #6 (IA), #7 (app) y #8 (integración/pruebas): revisados y fusionados en ramas de trabajo encadenadas.
+- PR #9: consolidación del código y evidencias hacia `main`.
+- PR #10: actualización de README y auditoría en `main`.
+- **Línea base liberada:** tag anotado `v1.0.0`, commit `848e58b`, publicado como release académica.
+
+Repositorio: https://github.com/LauraPecters/alimenta-ia
+Release: https://github.com/LauraPecters/alimenta-ia/releases/tag/v1.0.0
+
+**Control de cambios posteriores:** documentar revisiones mediante un PR nuevo. No reescribir ni mover el tag histórico `v1.0.0`.

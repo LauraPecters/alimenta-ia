@@ -23,14 +23,14 @@ Las 17 pruebas automatizadas fueron aprobadas después de integrar el proyecto e
 - [x] Pull Requests revisados y aprobados por el compañero.
 - [x] Pruebas automatizadas ejecutadas: 17/17 aprobadas.
 - [x] Dependencias declaradas y datos sintéticos disponibles.
-- [ ] Verificación final de ausencia de secretos y datos sensibles.
+- [x] Inspección básica de archivos versionados y búsqueda de términos asociados a credenciales, sin hallazgos sospechosos; no equivale a auditoría exhaustiva.
 - [x] Métricas de software, producción e IA documentadas.
 - [x] Integración de los cambios a la rama principal `main`.
-- [ ] Tag y notas de liberación v1.0.0.
+- [x] Tag anotado y release académica v1.0.0 publicados.
 
 ## 3. Gestión de configuración
 
-Se crearon, revisaron y fusionaron seis Pull Requests:
+Se crearon, revisaron y fusionaron siete Pull Requests:
 
 - PR #2: Registro y validación de lotes (GH-01).
 - PR #4: Indicadores de producción y calidad (GH-02).
@@ -38,6 +38,7 @@ Se crearon, revisaron y fusionaron seis Pull Requests:
 - PR #7: Integración de la aplicación.
 - PR #8: Pruebas de integración y evidencias.
 - PR #9: Integración final del proyecto ALIMENTA-IA a `main`.
+- PR #10: Actualización de README y auditoría en `main`.
 
 Las revisiones fueron realizadas por el colaborador JcepedaM y quedaron registradas en GitHub.
 
@@ -66,15 +67,15 @@ Repositorio: https://github.com/LauraPecters/alimenta-ia
 - El detector de IA presentó cinco falsos positivos en la evaluación con datos sintéticos.
 - Las pruebas automatizadas no garantizan la ausencia de errores en escenarios no evaluados.
 - La evaluación del modelo no permite extrapolar sus resultados a procesos industriales reales.
-- Está pendiente completar la verificación final de seguridad y publicar la versión etiquetada.
+- La verificación de secretos fue básica, no exhaustiva. No existe un registro independiente que demuestre cero defectos críticos abiertos.
 
 ## 5. Decisión de liberación
 
-**Decisión propuesta: APROBAR la liberación académica v1.0.0, condicionada a completar las verificaciones finales.**
+**Decisión registrada: se aprobó y publicó la liberación académica v1.0.0 dentro del alcance sintético, con las limitaciones indicadas. Esta publicación no implica aprobación para uso industrial.**
 
 **Evidencias verificadas:**
 
-- Los seis Pull Requests fueron integrados.
+- Los siete Pull Requests fueron integrados.
 - Se registraron revisiones y aprobaciones en GitHub.
 - La rama `main` contiene los módulos funcionales y las evidencias.
 - Se ejecutaron 17 pruebas automatizadas, todas aprobadas.
@@ -83,14 +84,9 @@ Repositorio: https://github.com/LauraPecters/alimenta-ia
 
 **Limitaciones:** el detector presenta cinco falsos positivos y sus alertas son únicamente orientativas. No debe utilizarse para tomar decisiones de inocuidad alimentaria.
 
-**Pendiente antes de liberar v1.0.0:**
+**Liberación efectuada:** tag anotado `v1.0.0` y release publicados sobre el commit `848e58b`.
 
-- Verificar la ausencia de secretos y datos sensibles.
-- Actualizar el archivo README con el estado definitivo del proyecto.
-- Confirmar la coherencia de la documentación con la versión final.
-- Crear el tag `v1.0.0` y sus notas de liberación.
-
-Hasta completar estas actividades, la liberación permanece pendiente de aprobación definitiva.
+**Seguimiento:** mantener controles de credenciales, verificar y registrar defectos abiertos por severidad, y reducir falsos positivos. Los documentos de cierre fueron aclarados después de la etiqueta histórica, por lo que requieren un PR adicional para integrarse en `main`.
 
 ## 6. Retrospectiva
 

@@ -1,47 +1,38 @@
-# Plan de medición
+# Plan de medición y análisis — ALIMENTA-IA
 
-| Ámbito | Fórmula | Fuente | Meta | Responsable |
+| Ámbito / indicador | Fórmula / método | Fuente | Meta | Responsable |
 |---|---|---|---|---|
-| Producto / pruebas | Pruebas aprobadas / ejecutadas × 100 | resultado_pytest.txt | 100 % | QA |
-| Producto / cobertura RF por pruebas | RF con pruebas automatizadas asociadas / 5 × 100 | Código y pruebas | ≥90 % | QA |
-| Proceso / PR revisados | PR aprobados / PR integrados × 100 | GitHub | 100 % | Configuración |
-| Proyecto / cumplimiento | Tareas terminadas / comprometidas × 100 | Tablero de tareas | ≥80 % | Líder |
-| Producción / tasa defectos | Unidades defectuosas / producidas × 100 | CSV sintético | Observar tendencia | Desarrollo |
-| IA / recall | TP / (TP + FN) | Etiquetas sintéticas y predicciones | Reportar límites | IA / QA |
+| Software: aprobación de pruebas | Aprobadas / ejecutadas × 100 | pytest | 100 % | QA |
+| Software: RF con pruebas asociadas | RF probados / RF totales × 100 | Matriz de trazabilidad | ≥90 % | QA |
+| Proceso: PR revisados | PR aprobados / PR integrados × 100 | GitHub | 100 % | Configuración |
+| Proyecto: cumplimiento | Tareas terminadas / comprometidas × 100 | Tablero de tareas | ≥80 % | Líder |
+| Producción: tasa global de defectos | Unidades defectuosas / producidas × 100 | CSV sintético | Analizar tendencia | Desarrollo |
+| IA: recall | VP / (VP + FN) | CSV sintético etiquetado | Informar valor y límites | IA / QA |
 
-## Resultados verificados
+## Resultados
 
-- **Pruebas automatizadas:** 17/17 aprobadas = 100 %.
-- **Cobertura de requisitos funcionales:** 5/5 = 100 % con pruebas automatizadas asociadas.
-- **Pull Requests creados:** 5, pendientes de revisión y aprobación.
-- **PR revisados:** N/D, debido a que todavía no existen integraciones aprobadas.
-- **Cumplimiento del proyecto:** N/D, porque aún no se ha establecido un tablero de tareas con compromisos medibles.
-- **Lotes sintéticos analizados:** 36.
-- **Unidades producidas:** 13.888.
-- **Unidades defectuosas:** 407.
-- **Tasa global de defectos:** 2,931 %.
-- **Recall del detector de IA:** 100 %.
-- **Precisión del detector de IA:** 44,44 %.
-- **Evaluación de IA:** 4 verdaderos positivos, 0 falsos negativos, 5 falsos positivos y 3 verdaderos negativos.
+| Indicador | Valor | Interpretación / acción |
+|---|---|---|
+| Aprobación pytest | **17/17 = 100 %** | Meta cumplida; mantener regresión |
+| Requisitos funcionales con pruebas | **5/5 = 100 %** | Trazabilidad completa por asociación; **no es cobertura de código** |
+| PR revisados e integrados | **7/7 = 100 %** | PR #2, #4, #6, #7, #8, #9 y #10; mantener revisión por pares |
+| Cumplimiento del proyecto | **N/D** | No se verificó un tablero con tareas comprometidas y terminadas; no inventar porcentaje |
+| Producción alimentaria simulada | **407/13.888 = 2,9305876 % (≈2,931 %)** | Comparar por lote/producto; no confundir con defectos de software |
+| Detección IA | VP=4, FN=0, FP=5, VN=3 | Recall **100 %**; precisión **44,44 %**; nueve alertas, cinco falsas |
 
-La cobertura de requisitos representa la existencia de pruebas asociadas a los cinco requisitos funcionales. No equivale a una cobertura del 100 % del código ni garantiza que se hayan evaluado todos los escenarios posibles.
+## Diseño de la evaluación IA
 
-## Análisis de resultados
+- Datos sintéticos: **36 lotes**; entrenamiento **24**, evaluación **12**.
+- Detector `IsolationForest`, semilla `42`, contaminación `0.15`, 100 estimadores; `StandardScaler` ajustado solo sobre entrenamiento.
+- La etiqueta sintética de evaluación se utiliza para calcular la matriz de confusión; no representa validación sanitaria real.
+- **Precisión** = VP/(VP+FP) = 4/9 = 44,44 %; **recall** = VP/(VP+FN) = 4/4 = 100 %.
+- La alta proporción de falsas alertas exige mejorar el modelo antes de considerar aplicaciones reales.
 
-Los resultados de las pruebas automatizadas muestran una tasa de aprobación del 100 %, lo que indica que los casos evaluados cumplen con los comportamientos esperados.
+## Acciones de mejora
 
-El prototipo procesó 36 lotes sintéticos y obtuvo una tasa global de defectos del 2,931 %. Este indicador corresponde a la producción alimentaria simulada y no debe confundirse con defectos del software.
+1. Reducir falsos positivos mediante análisis de variables/umbrales y evaluación ampliada.
+2. Automatizar las pruebas en integración continua (CI), sin afirmar que CI ya está implementada.
+3. Crear un tablero con tareas comprometidas/terminadas para poder medir cumplimiento del proyecto.
+4. Documentar defectos, su severidad y estado con evidencia verificable.
 
-El detector de inteligencia artificial obtuvo un recall del 100 %, identificando los cuatro casos atípicos etiquetados. Sin embargo, su precisión del 44,44 % evidencia la presencia de falsas alertas. Por lo tanto, sus resultados deben utilizarse únicamente como apoyo orientativo.
-
-En gestión de configuración, se han creado cinco Pull Requests, pero continúan pendientes las revisiones formales y su integración.
-
-## Acciones pendientes
-
-- Obtener la revisión y aprobación formal de los Pull Requests.
-- Integrar los cambios siguiendo el orden de dependencias establecido.
-- Definir y medir el cumplimiento de las tareas del proyecto.
-- Analizar las falsas alertas del detector de IA.
-- Actualizar las evidencias después de integrar los cambios.
-- Ejecutar nuevamente las pruebas de regresión.
-- Completar la auditoría y decidir sobre la liberación de la versión v1.0.0.
+**Fuentes:** `evidencias/metricas.txt`, `evidencias/evaluacion_ia.csv`, `evidencias/resultado_pytest.txt`, `data/lotes_ejemplo.csv` y PR de GitHub.
